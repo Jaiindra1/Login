@@ -11,7 +11,7 @@ function Login() {
         e.preventDefault();
         const endpoint = isLogin ? 'login' : 'register';
         try {
-            const response = await fetch(`http://localhost:5000/${endpoint}`, {
+            const response = await fetch(`https://672a4729864776ee0f28d90f--magnificent-kheer-a8c23f.netlify.app/${endpoint}`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, password })

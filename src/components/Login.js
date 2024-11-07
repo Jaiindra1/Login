@@ -20,7 +20,7 @@ function Login() {
             if (response.ok) {
                 setMessage(data.message);
                 if (isLogin) localStorage.setItem('token', data.token);
-                 window.location.href = 'https://ephemeral-hummingbird-496d3f.netlify.app/dashboard';
+                 window.location.href = '/Dashboard';
             } else {
                 setMessage(data.error);
             }

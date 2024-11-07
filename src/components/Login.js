@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 function Login() {
@@ -20,7 +21,7 @@ function Login() {
             if (response.ok) {
                 setMessage(data.message);
                 if (isLogin) localStorage.setItem('token', data.token);
-                  window.location.href = '/dashboard';
+                 navigate('/dashboard');
             } else {
                 setMessage(data.error);
             }

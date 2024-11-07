@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 function Login() {
@@ -21,7 +20,7 @@ function Login() {
             if (response.ok) {
                 setMessage(data.message);
                 if (isLogin) localStorage.setItem('token', data.token);
-                 navigate('/dashboard');
+                 window.location.href = 'https://ephemeral-hummingbird-496d3f.netlify.app/dashboard';
             } else {
                 setMessage(data.error);
             }

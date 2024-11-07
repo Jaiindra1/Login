@@ -20,7 +20,7 @@ function Login() {
             if (response.ok) {
                 setMessage(data.message);
                 if (isLogin) localStorage.setItem('token', data.token);
-                 navigate('/dashboard');
+                  window.location.href = '/dashboard';
             } else {
                 setMessage(data.error);
             }
